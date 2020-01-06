@@ -8,7 +8,7 @@ router.get('/', async function (req, res, next) {
 	const address = await os.networkInterfaces();
 
 	// const mac = address['Wi-Fi'][0].mac; //for windows
-	const mac = address['etho'][0].mac; //for linux
+	const mac = address['eth0'][0].mac; //for linux
 	// res.render('index', { title: 'Express' });
 	res.json({
 		mac: mac
